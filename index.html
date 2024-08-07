@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Y C Perfume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="YCPerfume">Y C Perfume</div>
+            <ul data-aos="fade-down" data-aos-duration="800">
+               <li><a href="">Home</a></li>
+               <li><a href="">Perfume</a></li>
+               <li><a href="">Contact</a></li>
+               <li><a href="">Info</a></li>
+            </ul>
+        </div>
+        <div class="banner" style="background-image: url('./images/2\ copy.jpg')">
+            <div class="glass-wrapper" data-aos="fade-right" data-aos-delay="600"data-aos-duration="700"></div>
+        </div>
+        <div class="hero-title">
+            <p data-aos="fade-left" data-aos-delay="400"data-aos-duration="700">Perfume</p>
+            <p class="List"
+            class="List"
+            data-aos="fade-left" data-aos-delay="600"data-aos-duration="700">List
+        </p>
+            <div class="details" data-aos="fade-left" data-aos-delay="600"data-aos-duration="700">
+               jsadghhbsaghjksadsghajkdghsajkdgdghsahdgsh sdajghsdhsahdsadhsadgh dsadgsahdgsahdgsah dgsadsahgdsh djsagh addadhgsa jhdgsahdgdsad sa
+            </div>
+            <div class="explore">
+                <button data-aos="fade-left" data-aos-delay="900"data-aos-duration="700">Explore</button>
+            </div>
+        <div class="perfume">
+            <ul class="perfume-list">
+                <li class="active"
+                data-img = "./images/Abercrombie-Fitch-Authentic-Night-Femme-2.jpeg"
+                >
+                    <div class="thumbnail" style="background: url('./images/Abercrombie-Fitch-Authentic-Night-Femme-2.jpeg')" data-aos="fade-up-right">
+                        <div class="details">
+                            <p class="sssss">Abercrombie</p>
+                    </div>
+               
+                </div>
+                </li>
+                <li  data-img = "./images/hhhhhh.jpeg"
+                >
+                    <div class="thumbnail" style="background: url('./images/hhhhhh.jpeg')"  data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom">
+                        <div class="details">
+                            <p class="sssss">Hugo Boss</p>
+                    </div>
+               
+                </div>
+                </li>
+            </li>
+            <li
+            data-img = "./images/versace\ eros.jpeg"
+            >
+                <div class="thumbnail" style="background: url('./images/versace\ eros.jpeg')" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                    <div class="details">
+                        <p class="sssss">Versace Eros</p>
+                </div>
+           
+            </div>
+            </li>
+        </li>
+        <li
+        data-img = "./images/polo\ sports.jpg"
+        >
+            <div class="thumbnail" style="background: url('./images/polo\ sports.jpg')" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
+                <div class="details">
+                    <p class="sssss">Polo Sports</p>
+            </div>
+       
+        </div>
+        </li>
+         </li>
+            <li
+            data-img = "./images/lacoste\ black.jpeg"
+            >
+                <div class="thumbnail" style="background: url('./images/lacoste\ black.jpeg')" data-aos="fade-up-left">
+                    <div class="details">
+                        <p class="sssss">Lacoste Black</p>
+                </div>
+           
+            </div>
+            </li>
+            </ul>
+            
+        </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+         AOS.init();
+
+        let places = document.querySelectorAll('.perfume-list li')
+        let active = "images/2\ copy.jpg";
+
+        places.forEach((e) =>{
+            e.addEventListener("mouseenter", (event) =>{
+                places.forEach((e) => {
+                    e.classList.remove("active");
+                });
+
+                event.target.classList.add("active");
+                active = event.target.getAttribute('data-img')
+                let banner = document.querySelector('.banner')
+                banner.style.backgroundImage = `url('${active}')`
+            });
+        });
+    </script>
+    
+</body>
+
+
+</html>
